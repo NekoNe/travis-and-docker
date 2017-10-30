@@ -7,6 +7,7 @@ ADD * /root/
 
 RUN yum install -y \
         clang \
+        gcc \
         cmake \
         make
 
