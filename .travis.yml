@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - docker build -t nekone/test .
+
+script:
+  - project=test
+  - docker run nekone/test $project
+
+
+
