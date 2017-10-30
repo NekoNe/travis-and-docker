@@ -3,7 +3,7 @@ FROM centos:7
 ADD run.sh /root/
 RUN chmod +x /root/run.sh
 
-ADD * /root/
+ADD . /root/
 
 RUN yum install -y \
         clang \
