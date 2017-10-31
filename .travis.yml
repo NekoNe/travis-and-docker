@@ -9,7 +9,7 @@ services:
   - docker
 
 install:
-  - docker build -t nekone/test -f ${DOCKERFILE}
+  - docker build -t nekone/test -f ${DOCKERFILE} .
 
 script:
   - project=test
