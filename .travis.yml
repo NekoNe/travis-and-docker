@@ -1,10 +1,14 @@
+env:
+  matrix:
+    - DOCKERFILE=Dockerfile
+
 sudo: required
 
 services:
   - docker
 
 install:
-  - docker build -t nekone/test .
+  - docker build -t nekone/test -f ${DOCKERFILE}
 
 script:
   - project=test
