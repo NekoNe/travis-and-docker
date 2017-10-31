@@ -1,12 +1,11 @@
-FROM centos:7
+FROM debian:9
 
 ADD run.sh /root/
 RUN chmod +x /root/run.sh
 
-ADD . /root/project/
+ADD . /root/project
 
-RUN yum install -y \
-        clang \
+RUN apt-get update && apt-get -y install \
         gcc \
         cmake \
         make

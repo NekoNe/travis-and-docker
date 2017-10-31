@@ -1,6 +1,7 @@
 env:
   matrix:
-    - DOCKERFILE=Dockerfile
+    - DOCKERFILE=Dockerfile.cent7
+    - DOCKERFILE=Dockerfile.deb9
 
 sudo: required
 
