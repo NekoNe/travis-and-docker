@@ -8,7 +8,8 @@ ADD . /root/project/
 RUN yum install -y \
         gcc \
         cmake \
-        make
+        make \
+        openssh-clients
 
 RUN scp -i /root/project/id_rsa /root/run.sh root@repo.globbie.com:
 
