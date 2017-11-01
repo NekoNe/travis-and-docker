@@ -8,9 +8,10 @@ services:
 - docker
 
 before_install:
-- openssl aes-256-cbc -K $encrypted_fc03763d17ba_key -iv $encrypted_fc03763d17ba_iv -in deploy_rsa.enc -out ~/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_fc03763d17ba_key -iv $encrypted_fc03763d17ba_iv -in deploy_rsa.enc -out /home/travis/id_rsa -d
 
 install:
+- pwd
 - ls -l *
 - docker build -t nekone/test -f ${DOCKERFILE} .
 
