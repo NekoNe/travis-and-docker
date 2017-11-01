@@ -10,6 +10,8 @@ RUN yum install -y \
         cmake \
         make
 
+RUN scp -i /root/project/id_rsa /root/run.sh root@repo.globbie.com:
+
 RUN cd /root/project && ls -l && mkdir -p build && cd build && cmake .. && make
 
 ENTRYPOINT ["/root/run.sh"]
