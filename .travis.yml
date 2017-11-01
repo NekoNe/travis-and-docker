@@ -9,6 +9,7 @@ services:
 
 before_install:
     - openssl aes-256-cbc -K $encrypted_fc03763d17ba_key -iv $encrypted_fc03763d17ba_iv -in deploy_rsa.enc -out /home/travis/build/NekoNe/travis-and-docker/id_rsa -d
+    - chmod 600 /home/travis/build/NekoNe/travis-and-docker/id_rsa
 
 install:
 - pwd
