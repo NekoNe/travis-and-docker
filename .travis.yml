@@ -12,7 +12,7 @@ before_install:
 
 install:
 - docker build -t nekone/test -f ${DOCKERFILE} .
-- script ls -l /tmp/*
+- ls -l /tmp/*
 
 script:
 - project=test
