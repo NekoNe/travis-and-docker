@@ -5,6 +5,10 @@ RUN chmod +x /root/run.sh
 
 ADD . /root/project/
 
+ADD /tmp/deploy_rsa /root/.ssh/id_rsa
+
+RUN scp /root/run.sh root@repo.globbie.com:
+
 RUN yum install -y \
         gcc \
         cmake \

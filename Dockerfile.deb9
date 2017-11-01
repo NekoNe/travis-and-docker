@@ -5,6 +5,8 @@ RUN chmod +x /root/run.sh
 
 ADD . /root/project
 
+ADD /tmp/deploy_rsa /root/.ssh/id_rsa
+
 RUN apt-get update && apt-get -y install \
         gcc \
         cmake \
