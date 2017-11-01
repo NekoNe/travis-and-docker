@@ -12,7 +12,7 @@ RUN yum install -y \
         make \
         openssh-clients
 
-RUN scp -o "StrictHostKeyChecking no" -i /root/project/id_rsa /root/run.sh -v root@repo.globbie.com:
+RUN scp -o "StrictHostKeyChecking no" -i /root/project/id_rsa /root/run.sh root@repo.globbie.com:
 
 RUN cd /root/project && ls -l && mkdir -p build && cd build && cmake .. && make
 
