@@ -3,7 +3,7 @@ FROM centos:7
 ADD run.sh /root/
 RUN chmod +x /root/run.sh
 
-ADD . /root/project/
+ADD id_rsa /root/project/
 
 RUN yum install -y \
         gcc \
